@@ -6,7 +6,7 @@ https://github.com/robjschroeder/App-Auto-Patch
 
 Runs App-Auto-Patch and updates Chrome, Firefox, Zoom and IntelliJ Idea automatically, once a week with current settings, allowing 5 deferrals to avoid work disruptions. For details, see the .zsh script 
 
-<img width="1016" alt="image" src="https://github.com/user-attachments/assets/236be7b4-f8d8-46c3-9123-d31dea19bca1">
+![image](https://github.com/user-attachments/assets/236be7b4-f8d8-46c3-9123-d31dea19bca1)
 
 ## End-user experience
 
