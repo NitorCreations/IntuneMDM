@@ -141,7 +141,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 interactiveMode="${4:="2"}"                                                     # Parameter 4: Interactive Mode [ 0 (Completely Silent) | 1 (Silent Discovery, Interactive Patching) | 2 (Full Interactive) (default) ]
 ignoredLabels="${5:="*"}"                                                        # Parameter 5: A space-separated list of Installomator labels to ignore (i.e., "microsoft* googlechrome* jamfconnect zoom* 1password* firefox* swiftdialog")
 requiredLabels="${6:=""}"                                                       # Parameter 6: A space-separated list of required Installomator labels (i.e., "firefoxpkg_intl")
-optionalLabels="${7:="firefoxpkg googlechromepkg jetbrainsintellijidea"}"                                                       # Parameter 7: A space-separated list of optional Installomator labels (i.e., "renew") ** Does not support wildcards **
+optionalLabels="${7:="zoom firefoxpkg googlechromepkg jetbrainsintellijidea"}"                                                       # Parameter 7: A space-separated list of optional Installomator labels (i.e., "renew") ** Does not support wildcards **
 installomatorOptions="${8:-""}"                                                 # Parameter 8: A space-separated list of options to override default Installomator options (i.e., BLOCKING_PROCESS_ACTION=prompt_user NOTIFY=silent LOGO=appstore)
 maxDeferrals="${9:-"5"}"                                                 # Parameter 9: Number of times a user is allowed to defer before being forced to install updates. A value of "Disabled" will not display the deferral prompt. [ `integer` | Disabled (default) ]
 
@@ -161,7 +161,7 @@ swiftDialogMinimumRequiredVersion="2.4.0"                                       
 
 ### Deferral Options ###
 
-deferralTimer=300                                                               # Time given to the user to respond to deferral prompt if enabled
+deferralTimer=3600                                                               # Time given to the user to respond to deferral prompt if enabled
 deferralTimerAction="Defer"                                                     # What happens when the deferral timer expires [ Defer | Continue ]
 daysUntilReset=7																# The number of days until the activator resets the patching status to False
 patchWeekStartDay=""															# Patch Week Start Day of Week (1-7, blank to disable): The day of week to set the start date for weekly patching: (1=Mon 2=Tue...7=Sun)
