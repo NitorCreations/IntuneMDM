@@ -141,9 +141,12 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 interactiveMode="${4:="2"}"                                                     # Parameter 4: Interactive Mode [ 0 (Completely Silent) | 1 (Silent Discovery, Interactive Patching) | 2 (Full Interactive) (default) ]
 ignoredLabels="${5:="*"}"                                                        # Parameter 5: A space-separated list of Installomator labels to ignore (i.e., "microsoft* googlechrome* jamfconnect zoom* 1password* firefox* swiftdialog")
 requiredLabels="${6:=""}"                                                       # Parameter 6: A space-separated list of required Installomator labels (i.e., "firefoxpkg_intl")
-optionalLabels="${7:="zoom firefox googlechrome jetbrainsintellijidea"}"                                                       # Parameter 7: A space-separated list of optional Installomator labels (i.e., "renew") ** Does not support wildcards **
+optionalLabels="${7:=""}"                                                       # Parameter 7: A space-separated list of optional Installomator labels (i.e., "renew") ** Does not support wildcards **
 installomatorOptions="${8:-""}"                                                 # Parameter 8: A space-separated list of options to override default Installomator options (i.e., BLOCKING_PROCESS_ACTION=prompt_user NOTIFY=silent LOGO=appstore)
 maxDeferrals="${9:-"5"}"                                                 # Parameter 9: Number of times a user is allowed to defer before being forced to install updates. A value of "Disabled" will not display the deferral prompt. [ `integer` | Disabled (default) ]
+
+# Nitor: Only update given apps
+includedLabels="${10:=" zoom zoomclient zoomgov zoomoutlookplugin zoomoutlookpluginremoval zoomroom firefox firefox_da firefox_intl firefoxdeveloperedition firefoxesr firefoxesr_intl firefoxpkg firefoxpkg_intl googlechrome googlechromepkg googlechromeenterprise googlechromedmg jetbrainsintellijidea "}"
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Various Feature Variables
@@ -549,6 +552,9 @@ ignoredLabelsArray=($(echo ${ignoredLabels}))
 requiredLabelsArray=($(echo ${requiredLabels}))
 optionalLabelsArray=($(echo ${optionalLabels}))
 convertedLabelsArray=($(echo ${convertedLabels}))
+
+# Nitor
+includedLabelsArray=($(echo ${includedLabels}))
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Gather Error Log
@@ -1531,7 +1537,10 @@ if [[ "${runDiscovery}" == "true" ]]; then
                     wildIgnored=( $(find $fragmentsPath/labels -name "$ignoredLabel") )
                     for i in "${wildIgnored[@]}"; do
                         ignored=$( echo $i | cut -d'.' -f1 | sed 's@.*/@@' )
-                        if [[ ! "$ignored" == "Application" ]]; then
+			debugVerbose "Check label $ignored, $ignoredLabel, ${includedLabelsArray}"
+			if [[ " ${includedLabels} " =~ " $ignored " ]]; then
+			    debugVerbose "Including label $ignored, omit from ignored label configuration plist"
+                        elif [[ ! "$ignored" == "Application" ]]; then
                             debugVerbose "Writing ignored label $ignored to configuration plist"
                             /usr/libexec/PlistBuddy -c "add \":IgnoredLabels:\" string \"${ignored}\"" "${appAutoPatchConfigFile}"
                             ignoredLabelsArray+=($ignored)
