@@ -146,8 +146,10 @@ installomatorOptions="${8:-""}"                                                 
 maxDeferrals="${9:-"5"}"                                                 # Parameter 9: Number of times a user is allowed to defer before being forced to install updates. A value of "Disabled" will not display the deferral prompt. [ `integer` | Disabled (default) ]
 
 # Nitor: Only update given apps
-includedLabels="${10:=" zoom zoomclient zoomgov zoomoutlookplugin zoomoutlookpluginremoval zoomroom firefox firefox_da firefox_intl firefoxdeveloperedition firefoxesr firefoxesr_intl firefoxpkg firefoxpkg_intl googlechrome googlechromepkg googlechromeenterprise googlechromedmg jetbrainsintellijidea "}"
+#includedLabels="${10:=" zoom zoomclient zoomgov zoomoutlookplugin zoomoutlookpluginremoval zoomroom firefox firefox_da firefox_intl firefoxdeveloperedition firefoxesr firefoxesr_intl firefoxpkg firefoxpkg_intl googlechrome googlechromepkg googlechromeenterprise googlechromedmg jetbrainsintellijidea "}"
 
+# Omit chrome and try to opt for Chrome update policy instead
+includedLabels="${10:=" zoom zoomclient zoomgov zoomoutlookplugin zoomoutlookpluginremoval zoomroom firefox firefox_da firefox_intl firefoxdeveloperedition firefoxesr firefoxesr_intl firefoxpkg firefoxpkg_intl jetbrainsintellijidea "}"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Various Feature Variables
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
