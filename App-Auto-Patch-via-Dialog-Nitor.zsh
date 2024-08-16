@@ -149,7 +149,7 @@ maxDeferrals="${9:-"5"}"                                                 # Param
 #includedLabels="${10:=" zoom zoomclient zoomgov zoomoutlookplugin zoomoutlookpluginremoval zoomroom firefox firefox_da firefox_intl firefoxdeveloperedition firefoxesr firefoxesr_intl firefoxpkg firefoxpkg_intl googlechrome googlechromepkg googlechromeenterprise googlechromedmg jetbrainsintellijidea "}"
 
 # Omit chrome and try to opt for Chrome update policy instead
-includedLabels="${10:=" zoom zoomclient zoomgov zoomoutlookplugin zoomoutlookpluginremoval zoomroom firefox firefox_da firefox_intl firefoxdeveloperedition firefoxesr firefoxesr_intl firefoxpkg firefoxpkg_intl jetbrainsintellijidea "}"
+includedLabels="${10:=" vlc zoom zoomclient zoomgov zoomoutlookplugin zoomoutlookpluginremoval zoomroom firefox firefox_da firefox_intl firefoxdeveloperedition firefoxesr firefoxesr_intl firefoxpkg firefoxpkg_intl jetbrainsintellijidea "}"
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Various Feature Variables
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
