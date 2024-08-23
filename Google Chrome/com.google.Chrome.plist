@@ -1,0 +1,6 @@
+	<key>RelaunchNotificationPeriod</key>
+	<integer>43200000</integer>
+	<key>RelaunchNotification</key>
+	<integer>2</integer>
+	<key>RestoreOnStartup</key>
+	<integer>1</integer>
