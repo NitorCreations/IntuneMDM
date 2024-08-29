@@ -1,3 +1,5 @@
+	<key>UpdateDefault</key>
+	<integer>0</integer>
 	<key>RelaunchNotificationPeriod</key>
 	<integer>43200000</integer>
 	<key>RelaunchNotification</key>
