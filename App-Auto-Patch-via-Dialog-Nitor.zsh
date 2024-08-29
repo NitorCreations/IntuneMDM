@@ -166,7 +166,7 @@ swiftDialogMinimumRequiredVersion="2.4.0"                                       
 
 deferralTimer=3600                                                               # Time given to the user to respond to deferral prompt if enabled
 deferralTimerAction="Defer"                                                     # What happens when the deferral timer expires [ Defer | Continue ]
-daysUntilReset=1																# The number of days until the activator resets the patching status to False
+daysUntilReset=3																# The number of days until the activator resets the patching status to False
 patchWeekStartDay=""															# Patch Week Start Day of Week (1-7, blank to disable): The day of week to set the start date for weekly patching: (1=Mon 2=Tue...7=Sun)
 maxDisplayAssertionCount=""														# The maximum number of deferred attempts from Display Assertions (Integer, blank to disable)
 selfServicePatchingStatusModeReset="1"                                          # Determines if weekly patching status should be set to true when running in Self Service mode (deferrals disabled) [1=Never, 2=Always, 3=On Success (no errors)]
