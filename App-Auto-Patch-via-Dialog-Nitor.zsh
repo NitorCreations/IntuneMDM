@@ -298,14 +298,16 @@ fi
 
 ### Support Team Details ###
 
-supportTeamName="Add IT Support"
-supportTeamPhone="Add IT Phone Number"
-supportTeamEmail="Add email"
-supportTeamWebsite="Add IT Help site"
+supportTeamName="Nitor Systems Administration"
+supportTeamPhone="IT Phone Number"
+supportTeamEmail="nsa@nitorgroupfi.onmicrosoft.com"
+supportTeamWebsite="https://nitorgroup.slack.com/archives/CPBLB8SSHe"
 supportTeamHyperlink="[${supportTeamWebsite}](https://${supportTeamWebsite})"
 
 # Create the help message based on Support Team variables
-helpMessage="If you need assistance, please contact ${supportTeamName}:  \n- **Telephone:** ${supportTeamPhone}  \n- **Email:** ${supportTeamEmail}  \n- **Help Website:** ${supportTeamHyperlink}  \n\n**Computer Information:**  \n- **Operating System:**  $osVersion ($osBuild)  \n- **Serial Number:** $serialNumber  \n- **Dialog:** $dialogVersion  \n- **Started:** $timestamp  \n- **Script Version:** $scriptVersion"
+#helpMessage="If you need assistance, please contact ${supportTeamName}:  \n- **Telephone:** ${supportTeamPhone}  \n- **Email:** ${supportTeamEmail}  \n- **Help Website:** ${supportTeamHyperlink}  \n\n**Computer Information:**  \n- **Operating System:**  $osVersion ($osBuild)  \n- **Serial Number:** $serialNumber  \n- **Dialog:** $dialogVersion  \n- **Started:** $timestamp  \n- **Script Version:** $scriptVersion"
+
+helpMessage=If you need assistance, please contact #nsa in Slack at https://nitorgroup.slack.com/archives/CPBLB8SSHe, \n\n**Computer Information:**  \n- **Operating System:**  $osVersion ($osBuild)  \n- **Serial Number:** $serialNumber  \n- **Dialog:** $dialogVersion  \n- **Started:** $timestamp  \n- **Script Version:** $scriptVersion"
 
 ####################################################################################################
 #
