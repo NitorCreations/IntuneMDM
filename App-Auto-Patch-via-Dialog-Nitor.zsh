@@ -201,7 +201,7 @@ useLatestAvailableInstallomatorScriptVersion="true"                             
 
 webhookEnabled="all"                                                            # Enables the webhook feature [ all | failures | false (default) ]
 teamsURL=""                                                                     # Teams webhook URL                         
-slackURL="https://hooks.slack.com/services/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"
+slackURL=$SLACK_URL
                                                                                 # Slack webhook URL
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
