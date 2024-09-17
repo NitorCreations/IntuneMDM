@@ -2003,26 +2003,6 @@ else
 				{
 					"type": "mrkdwn",
 					"text": ">*Errors:*\n>'"$formatted_error_result"'"
-				},
-                		{
-					"type": "mrkdwn",
-					"text": ">*Computer Record:*\n>'"$jamfProComputerURL"'"
-				}
-			]
-		},
-		{
-		"type": "actions",
-			"elements": [
-				{
-					"type": "button",
-					"text": {
-						"type": "plain_text",
-						"text": "View computer in Jamf Pro",
-						"emoji": true
-					},
-					"style": "primary",
-					"action_id": "actionId-0",
-					"url": "'"$jamfProComputerURL"'"
 				}
 			]
 		}
